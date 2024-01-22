@@ -5,24 +5,24 @@ Java-DSA Notes
 ##Learn the Basics
 
 
-- [ ] User Input / Output		
+- [x] User Input / Output		
 
-- [ ] Data Types		
+- [x] Data Types		
 
-- [ ] If Else statements		
+- [x] If Else statements		
 
-- [ ] Switch Statement		
+- [x] Switch Statement		
 
-- [ ] What are arrays, and strings?		
+- [x] What are arrays, and strings?		
 
-- [ ] For loops		
+- [x] For loops		
 
-- [ ] While loops		
+- [x] While loops		
 
-- [ ] Functions (Pass by Reference and Va…		
+- [x] Functions (Pass by Reference and Va…		
 
-- [ ] Time Complexity & Space Complexity
+- [x] Time Complexity & Space Complexity
 
-- [ ] Patterns
+- [x] Patterns
 
-- [ ] Java Collections
+- [x] Java Collections
