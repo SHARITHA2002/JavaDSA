@@ -25,4 +25,4 @@ Java-DSA Notes
 
 - [x] Patterns
 
-- [x] Java Collections
+- [x] Java Collections -- 22/01
