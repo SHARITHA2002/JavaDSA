@@ -1,4 +1,4 @@
-## Eucleddian Algorithms
+## Eucledian Algorithm
 
 **1) Finding Digits**
 
