@@ -7,8 +7,14 @@
     while(n>0)
     {
       int rem=n%10;
-      sout(rem);
+      system.out.print(rem);
       n=n/10;
     }
     
   ```
+
+Output:
+
+```
+7 7 8  9
+```
