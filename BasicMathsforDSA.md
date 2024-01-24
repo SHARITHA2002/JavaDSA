@@ -1,4 +1,4 @@
-## Eucledian Algorithm
+## Euclidian Algorithm
 
 **1) Finding Digits**
 
@@ -18,3 +18,13 @@ Output:
 ```
 7 7 8  9
 ```
+
+**2) Finding Binary**
+
+```
+  temp=n%2;
+  n/=2;
+```
+
+- Here 2 represents Binary,8 for Octal,16 for hexadecimal
+
