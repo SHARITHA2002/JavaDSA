@@ -1,4 +1,12 @@
-## Euclidian Algorithm
+## Basic Maths
+
+ 1) Count Digits => Length of the digits:(int)Math.log10(n)+1
+ 2) Reverse a number
+ 3) Check palindrome
+ 4) Armstrong number
+ 5) Print all divisors
+ 6) Check for prime
+ 7) GCD or HCF 
 
 ## Finding Digits
 
@@ -30,6 +38,27 @@ Output:
 - Here 2 represents Binary,8 for Octal,16 for hexadecimal
 
 
+
+## Counting a digit
+
+     int temp=n;
+        int count=0;
+        while(temp>0)
+        {
+            int rem=temp%10;
+            if(rem!=0)
+            {
+                if(n%rem==0)
+                {
+                     count++;
+                }
+            }
+            temp/=10;
+        }
+        return count;
+      // n=35; ans=1 since 35  is only divisible  by 5
+      // n=336 ; ans=3 since 336 divisible by both 3,3 & 6;
+
 ## Reverse a Number
 
 ```
@@ -52,4 +81,28 @@ while(n>0)
  
 ## 	Armstrong Numbers
 
-  - For Armstrong number,use reminder * reminder *reminder instead of Math.pow(rem,3);
+  - For Armstrong number,use ans+= reminder * reminder *reminder instead of Math.pow(rem,3);
+  - return ans==number?true:false
+
+## Divisors
+
+
+
+## GCD or HCF 
+
+  - Two approaches :
+  1) FInd min of 2 number, until min number, check if element divides both n &m
+  2) Eucledian algorithm : gcd(a,b)=gcd(a-b,b) ,if(a>b)
+
+     ```
+         while(n>0 && m>0)
+         {
+           if(n>m) n%=m;
+           else    m%=n
+         }
+
+         if(n==0) return m;
+         else return n;
+     ```
+
+  - Time complexity: O(log <sub>pi</sub> min(a,b))
