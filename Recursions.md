@@ -8,7 +8,7 @@
     
       <img src="https://takeuforward.org/wp-content/uploads/2023/02/image-5.png" alt="RecursionTree" height=250 width=250>
 
-  - Recurion - Practice Problems 🏋️
+  - Recursion - Practice Problems 🏋️
     
              
                 1.Print 1 to N using recursion 
@@ -23,11 +23,11 @@
      ## Print 1 to N using Recursion
 
       - Idea 💡:
-        - Normally we can use the loops to itearte the numbers,but the condition without using loops.
-        - But three things remain same [intialization,condition,increment]
-        - Here comes recusrion in play,just pass the intialized count & number to the function
-        - Inside the function call the function itself until count becomes less than n & when condition not matches,return array.
-        - And incement the count value while calling itself.
+        - Normally we can use the loops to iterate the numbers, but the condition without using loops.
+        - But three things remain the same [intialization, condition, increment]
+        - Here comes recursion in play, just pass the initialized count & number to the function
+        - Inside the function call the function itself until the count becomes less than n & when the condition does not match, return the array.
+        - And increment the count value while calling itself.
         
       - Code 👩‍💻:
 
@@ -59,10 +59,10 @@
 
       - Idea 💡:
         
-        - Normally we can use the loops to itearte the numbers,but the condition without using loops.
-        - But three things remain same [intialization,condition,increment]
-        - Here comes recusrion in play,just pass the count [i.e if n=5,count also 5] & number to the function
-        - Inside the function call the function itself until count becomes greater than 1 & when condition not matches return array.
+        - Normally we can use the loops to iterate the numbers, but the condition without using loops.
+        - But three things remain the same [intialization, condition, increment]
+        - Here comes recursion in play, just pass the count [i.e if n=5, count also 5] & number to the function
+        - Inside the function call the function itself until the count becomes greater than 1 & when the condition not matches return the array.
         - And decrement the count value while calling itself.
           
       - Code 👩‍💻:
@@ -142,11 +142,11 @@
     ## Reverse an array
 
       - Idea 💡:
-         - Create a recursive funtcion that gets an array,start& end of an array
-         - Start obviously 0 and end arr.length-1.Pass these params to recursive function
-         - Function call itself until [start<end] that means,when the start & end pointer travel in the opposit direction,@ that point we can confirm that i traversed half of the array.
-         - Inside the function,try to swap both the two pointer values[start & end].
-         - While calling the function itself ,increment the start ptr by +1 & end ptr by -1 => for iterating throughout the loop.
+         - Create a recursive function that gets an array, start& end of an array
+         - Start obviously 0 and end arr.length-1.Pass these params to the recursive function
+         - Function calls itself until [start<end] which means when the start & end pointers travel in the opposite direction,@ that point we can confirm that I traversed half of the array.
+         - Inside the function, try to swap both the two pointer values[start & end].
+         - While calling the function itself, increment the start ptr by +1 & end ptr by -1 => for iterating throughout the loop.
           
       - Code 👩‍💻:
 
@@ -173,8 +173,8 @@
     ## String-Palindrome or not
 
      - Idea 💡:
-         - Same as swaping an array,but only thing there is no need of swapping,only checking
-         - if the 2 char not same return false,if the ptr crosses half of the string without fall in the condition, returns true
+         - Same as swapping an array, but the only thing is there is no need for swapping, only checking
+         - if the 2 char are not same return false, if the ptr crosses half of the string without falling in the condition, returns true
           
       - Code 👩‍💻:
 
