@@ -26,7 +26,7 @@
         - Normally we can use the loops to itearte the numbers,but the condition without using loops.
         - But three things remain same [intialization,condition,increment]
         - Here comes recusrion in play,just pass the intialized count & number to the function
-        - Inside the function call the function itself until count becomes greater than n
+        - Inside the function call the function itself until count becomes less than n & when condition not matches,return array.
         - And incement the count value while calling itself.
         
       - Code 👩‍💻:
@@ -57,6 +57,16 @@
 
     ## Print N to 1 using recursion
 
+      - Idea 💡:
+        
+        - Normally we can use the loops to itearte the numbers,but the condition without using loops.
+        - But three things remain same [intialization,condition,increment]
+        - Here comes recusrion in play,just pass the count [i.e if n=5,count also 5] & number to the function
+        - Inside the function call the function itself until count becomes greater than 1 & when condition not matches return array.
+        - And decrement the count value while calling itself.
+          
+      - Code 👩‍💻:
+
               public static int[] printNos(int x)
                 {
                   int[] nums=new int[x];
@@ -76,7 +86,11 @@
 
     ## Sum of first N numbers 
 
-       - Try to using the formula .Sum of first n natural numbers= n*(n-1),if n==0,return 0
+      - Idea 💡:
+         - Try to solve it using the math formula.
+         - Sum of first n natural numbers= n*(n-1),if n==0,return 0
+          
+      - Code 👩‍💻:
 
                  public static long sumFirstN(long n)
                  {
@@ -95,8 +109,11 @@
 
     ## Factorial of first n number
 
-    Example : n=7 output:[1,2,6]
-    - Remember the formula -> n*(n-1) but if n==0 return 1;
+    - Idea 💡:
+         - Try to solve it using the math formula.
+         - n*(n-1),if n==0 return 1;
+          
+    - Code 👩‍💻:
 
             public static List<Long> factorialNumbers(long n) 
               {
@@ -124,6 +141,15 @@
 
     ## Reverse an array
 
+      - Idea 💡:
+         - Create a recursive funtcion that gets an array,start& end of an array
+         - Start obviously 0 and end arr.length-1.Pass these params to recursive function
+         - Function call itself until [start<end] that means,when the start & end pointer travel in the opposit direction,@ that point we can confirm that i traversed half of the array.
+         - Inside the function,try to swap both the two pointer values[start & end].
+         - While calling the function itself ,increment the start ptr by +1 & end ptr by -1 => for iterating throughout the loop.
+          
+      - Code 👩‍💻:
+
             public static int[] reverseArray(int n, int []nums)
             {
                 int start=0;
@@ -146,18 +172,24 @@
 
     ## String-Palindrome or not
 
-        public static boolean isPalindrome(String str)
-        {
-            int i=0;
-            return isPal(str,i);
-        }
+     - Idea 💡:
+         - Same as swaping an array,but only thing there is no need of swapping,only checking
+         - if the 2 char not same return false,if the ptr crosses half of the string without fall in the condition, returns true
+          
+      - Code 👩‍💻:
 
-        public static boolean isPal(String str,int i)
-          {
-              if(i>str.length()/2)
+            public static boolean isPalindrome(String str)
+            {
+                int i=0;
+                return isPal(str,i);
+            }
+    
+            public static boolean isPal(String str,int i)
               {
-                      return true;
-              }
+                  if(i>str.length()/2)
+                  {
+                          return true;
+                  }
       
               if(str.charAt(i)!=str.charAt(str.length()-i-1))
               {
@@ -168,17 +200,24 @@
           }
 
     ## Fibonacci number
-
-          public int fib(int n)
-          {
-              return fibbo(n);
-          }
-
-          public static int fibbo(int n)
-          {
-              if(n<=1)
+      
+     - Idea 💡:
+         - Use the Math formula : f(n-1)+f(n-2)
+         - In fibonacci, always f[0]=0; f[1]=1; f[2]=1;
+         - Example: if n=5 : 0,1,1,2,3
+          
+      - Code 👩‍💻:
+   
+              public int fib(int n)
               {
-                  return n;
+                  return fibbo(n);
               }
-              return fibbo(n-1)+fibbo(n-2);
-          }
+    
+              public static int fibbo(int n)
+              {
+                  if(n<=1)
+                  {
+                      return n;
+                  }
+                  return fibbo(n-1)+fibbo(n-2);
+              }
