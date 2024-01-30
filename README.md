@@ -21,4 +21,7 @@
 6) Recursion:
    
    ♾️ https://github.com/SHARITHA2002/JavaDSA/blob/main/Recursions.md
+   
+8) Hashing:
 
+   #️⃣ https://github.com/SHARITHA2002/JavaDSA/blob/main/Hashing.md
