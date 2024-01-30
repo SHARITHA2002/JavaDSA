@@ -1,4 +1,4 @@
-## Recursions
+## Recursions♾️
 
   - It is a phenomenon when a function calls itself indefinitely until a specified condition is fulfilled.
   - What is Stack Overflow in Recursion?
