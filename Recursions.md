@@ -8,18 +8,28 @@
     
       <img src="https://takeuforward.org/wp-content/uploads/2023/02/image-5.png" alt="RecursionTree" height=250 width=250>
 
-  - Recurion - Practice Problems
-     <ol type="1">
-        <li>Print 1 to N using recursion</li>
-       <li>Print N to 1 using recursion</li>
-       <li>Sum of first N numbers</li>
-       <li>Factorial of N numbers</li>
-       <li>Reverse an array</li>
-       <li>Check if a string is palindrome or not</li>
-       <li>Fibonacci number</li>
-     </ol>
+  - Recurion - Practice Problems 🏋️
+    
+             
+                1.Print 1 to N using recursion 
+                2.Print N to 1 using recursion 
+                3.Sum of first N numbers 
+                4.Factorial of N numbers 
+                5.Reverse an array 
+                6.Check if a string is palindrome or not 
+                7.Fibonacci number 
+             
 
      ## Print 1 to N using Recursion
+
+      - Idea 💡:
+        - Normally we can use the loops to itearte the numbers,but the condition without using loops.
+        - But three things remain same [intialization,condition,increment]
+        - Here comes recusrion in play,just pass the intialized count & number to the function
+        - Inside the function call the function itself until count becomes greater than n
+        - And incement the count value while calling itself.
+        
+      - Code 👩‍💻:
 
             public class Solution
             {
@@ -41,6 +51,8 @@
                     return add(nums,count+1,x); // Increment
                 }
             }
+
+    
 
 
     ## Print N to 1 using recursion
@@ -110,4 +122,63 @@
               }
 
 
-          
+    ## Reverse an array
+
+            public static int[] reverseArray(int n, int []nums)
+            {
+                int start=0;
+                int end=nums.length-1;
+                return reverse(nums,start,end);
+            }
+
+            public static int[] reverse(int[] nums, int start,int end)
+            {
+                if(start>end)
+                {
+                    return nums;
+                }
+                int temp=nums[start];
+                nums[start]=nums[end];
+                nums[end]=temp;
+        
+                return reverse(nums,start+1,end-1);
+            }
+
+    ## String-Palindrome or not
+
+        public static boolean isPalindrome(String str)
+        {
+            int i=0;
+            return isPal(str,i);
+        }
+
+        public static boolean isPal(String str,int i)
+          {
+              if(i>str.length()/2)
+              {
+                      return true;
+              }
+      
+              if(str.charAt(i)!=str.charAt(str.length()-i-1))
+              {
+                      return false;
+              }
+      
+              return isPal(str,i+1);
+          }
+
+    ## Fibonacci number
+
+          public int fib(int n)
+          {
+              return fibbo(n);
+          }
+
+          public static int fibbo(int n)
+          {
+              if(n<=1)
+              {
+                  return n;
+              }
+              return fibbo(n-1)+fibbo(n-2);
+          }
