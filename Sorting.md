@@ -72,3 +72,33 @@ Time Complexity ⏰
 
   Worst case : O(n<sup>2</sup>)
   Best Case  : O(n), that means given arr is sorted 
+
+
+## 3) Insertion Sort
+
+ - Takes an element & places it in the correct position.
+
+PseudoCode💡:
+
+- Start an outer loop from o to arr. length -1
+- Next iterate an inner while loop [j>0 && arr[j-1]>arr[j]]
+- Check if arr[j-1]>arr[j],if it is then swap arr[j] && arr[j-1]
+
+Code 👩‍💻
+
+        for(int i=0;i<arr.length-1;i++)
+        {
+          int j=i;
+          while(j>0 && arr[j-1]>arr[j])
+          {
+              int temp=arr[j-1];
+              arr[j-1]=arr[j];
+              arr[j]=temp;
+              j--;
+          }
+        }
+
+Time Complexity ⏰
+
+  Worst case : O(n<sup>2</sup>)
+  Best Case  : O(n), that means given arr is sorted 
