@@ -25,3 +25,11 @@
 8) Hashing:
 
    #️⃣ https://github.com/SHARITHA2002/JavaDSA/blob/main/Hashing.md
+
+9) Sorting:
+
+    📊 https://github.com/SHARITHA2002/JavaDSA/blob/main/Sorting.md
+
+10) Searching:
+
+     🔍https://github.com/SHARITHA2002/JavaDSA/blob/main/Searching.md
