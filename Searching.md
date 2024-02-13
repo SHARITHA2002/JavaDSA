@@ -41,10 +41,10 @@ Code 👩‍💻
             public static int binarySearch(int[] arr,target)
             {
                 int left=0;
-                int right=arr.length;
+                int right=arr.length-1;
                 while(left<=right)
                 {
-                    int mid=right+(left-right)/2;
+                    int mid=left+(right-left)/2;
                     if(target>arr[mid])
                     {
                         left=mid+1;
@@ -60,3 +60,10 @@ Code 👩‍💻
                 }
                 return -1;
             }
+
+
+Binary Search -Interview Questions: 👔
+
+   - https://github.com/SHARITHA2002/JavaDSA/blob/main/BinarySearch-InterviewQuestions.md
+
+     
