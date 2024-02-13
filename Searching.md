@@ -33,3 +33,30 @@
 - ⏰Time Complexity: O(log N)
 
 Code 👩‍💻
+          
+            int[] arr={1,2,3,4,5,6,7,8,9,10};
+            int target=7;
+            System.out.println(binarySearch(arr,target));
+
+            public static int binarySearch(int[] arr,target)
+            {
+                int left=0;
+                int right=arr.length;
+                while(left<=right)
+                {
+                    int mid=right+(left-right)/2;
+                    if(target>arr[mid])
+                    {
+                        left=mid+1;
+                    }
+                    else if(target<arr[mid])
+                    {
+                        right=mid-1;
+                    }
+                    else
+                    {
+                        return mid;
+                    }
+                }
+                return -1;
+            }
