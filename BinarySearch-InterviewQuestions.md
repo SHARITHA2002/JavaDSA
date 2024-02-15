@@ -40,7 +40,7 @@ Code 👩‍💻 :
             	        }
             	    }
             	    
-            	    return arr[end];
+            	    return end;
             	}
        
 2) Find the ceil of a number
@@ -77,4 +77,4 @@ Code 👩‍💻 :
             	        }
             	    }
             	    
-            	    return arr[start];
+            	    return start;
