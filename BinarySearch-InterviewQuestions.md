@@ -8,7 +8,7 @@
   
 **Code 👩‍💻 :**
               
-              int[] arr={1,2,4,5,15,18,19};
+          int[] arr={1,2,4,5,15,18,19};
   	      int target=7;
 	      System.out.println("Floor of a number:"+binarySearch(arr,target));
                
@@ -42,7 +42,7 @@
 - Input: nums = [1,4,5,14,16,18,20,25,29,30], target = 15 : Output: nums[4] 16
 - The key here is to return to the **start**. 
        
-Code 👩‍💻 :
+**Code 👩‍💻 :**
               
               int[] arr={1,4,5,14,16,18,20,25,29,30};
   	          int target=15;
@@ -81,7 +81,7 @@ Code 👩‍💻 :
    
    Explanation: The smallest character that is lexicographically greater than 'a in letters is 'c'.
 
-Idea 💡:
+**Idea 💡:**
 
  - From greater than the target itself, we can find that they ask for ceil. If it is ceil, then we should return **start**
  - Two things to be noted are that, 
@@ -117,4 +117,55 @@ Idea 💡:
     -  Time complexity ⌛: O(log n)
 
 **Link:🔗** https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/
+
+## 6) Find the position of an element in a sorted array of infinite numbers
+
+**Idea💡**
+ - In normal Bsearch, we can find the length i.e) arr. length, But they said that An arr is infinite, We can't able to use the arr. length
+ - So by reverse thinking the Bsearch, We start searching chunk by chunk from the size of 2 [0,1], if a target is found return the target otherwise double the size of the chunk
+ - Conditions, when double the chunk size, is as long as our target is greater than the arr[end].
+
+**Code👩🏻‍💻**
+
+	   public static void main(String[] args)
+           {
+			int[] arr={3, 5, 7, 9, 10, 90,100, 130, 140, 160, 170};
+			int target=10;
+			System.out.print(findans(arr,target));
+	   }
+		public static int findans(int[] arr,int target)
+		{
+		    int start=0;
+                    int end=1;
+		    while(target>arr[end])
+			{
+			    start=end+1;
+			    int newStart=end+1;
+			    end=(newStart*2)+1;
+			}
+			return binarySearch(arr,target,start,end);
+		}
+		public static int binarySearch(int[] arr,int target,int start,int end)
+		{
+		    while(start<=end)
+		    {
+		        int mid=start+(end-start)/2;
+		        if(target>arr[mid])
+		        {
+		            start=mid+1;
+		        }
+		        else if(target<arr[mid])
+		        {
+		            end=mid-1;
+		        }
+		        else
+		        {
+		            return mid;
+		        }
+		   }
+		   
+		   return -1;
+		}
+
+**Link:🔗** https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/
 
