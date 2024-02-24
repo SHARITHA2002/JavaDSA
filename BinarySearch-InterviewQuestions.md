@@ -11,6 +11,7 @@ Logic 💡:
   - It searches for target element 15, throughout the array
   - The case here is the floor of a number, at last [15,18,19] are there,
     - while(start<=end) & mid=15, target<mid => end=mid-1 , then [5,15] end:5 start:15
+  - The key here is to return the start 
   
 Code 👩‍💻 :
               
@@ -47,7 +48,8 @@ Code 👩‍💻 :
 
      - arr[]={1,2,4,5,15,18};
      - target=7 : ans => 15,[1,2,4,5]
-     - The smallest number which is greater than or equal to the target number.
+     - The smallest number is greater than or equal to the target number.
+     - The key here is to return to the end. 
        
 Code 👩‍💻 :
               
