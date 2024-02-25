@@ -170,7 +170,7 @@
 **Link:🔗** https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/
 
 
-## 7) Peak Index in a Mountain Array
+## 7) Peak Index in a Mountain Array or  Find Peak Element
 
 **Mountain array / Bitonic Array:**
 
@@ -180,7 +180,7 @@
  **Idea💡**
  - There will be no target, so we have to check with the adjacents based on certain conditions
  - 1st condition would be, if arr[mid]>arr[mid+1]: we are in the descending part Hence , end=mid;
- - Or else we are in the descending part , then start=mid+1;
+ - Or else we are in the descending part, then start=mid+1;
  - The loop will iterate until a single element, hence when the start & end are at the same position, the return any one of them [start/end]
 
  **Code👩🏻‍💻**
@@ -211,7 +211,10 @@
     }
 
 
-**Link:🔗** https://leetcode.com/problems/peak-index-in-a-mountain-array/description/
+**Links:🔗** 
+  1) https://leetcode.com/problems/peak-index-in-a-mountain-array/description/
+ 
+  2) https://leetcode.com/problems/find-peak-element/
 
 
 
