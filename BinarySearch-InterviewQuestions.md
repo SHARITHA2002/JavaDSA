@@ -169,3 +169,49 @@
 
 **Link:🔗** https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/
 
+
+## 7) Peak Index in a Mountain Array
+
+**Mountain array / Bitonic Array:**
+
+  - A mountain array is an array of length at least 3 with elements strictly increasing from starting till index i, and then strictly decreasing from index i to last index.
+  - Input: arr = [0,10,5,2] Output: 1
+
+ **Idea💡**
+ - There will be no target, so we have to check with the adjacents based on certain conditions
+ - 1st condition would be, if arr[mid]>arr[mid+1]: we are in the descending part Hence , end=mid;
+ - Or else we are in the descending part , then start=mid+1;
+ - The loop will iterate until a single element, hence when the start & end are at the same position, the return any one of them [start/end]
+
+ **Code👩🏻‍💻**
+
+ 	public int peakIndexInMountainArray(int[] arr) 
+    {
+        int start=0;
+        int end=arr.length-1;
+
+        while(start<end)
+        {
+            int mid=start+(end-start)/2;
+            if(arr[mid]>arr[mid+1])
+            {
+                end=mid;
+            }
+            else
+            {
+                start=mid+1;
+            }
+        }
+
+        if(start==end)
+        {
+            return start;
+        }
+        return -1;
+    }
+
+
+**Link:🔗** https://leetcode.com/problems/peak-index-in-a-mountain-array/description/
+
+
+
