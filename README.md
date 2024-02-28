@@ -33,3 +33,8 @@
 10) Searching:
 
      🔍https://github.com/SHARITHA2002/JavaDSA/blob/main/Searching.md
+
+11) Basic array Problems :
+
+    🗃https://github.com/SHARITHA2002/JavaDSA/blob/main/ArrayBasicProblems.md
+    
