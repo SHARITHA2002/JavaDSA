@@ -1,6 +1,6 @@
 ## Arrays Basic Problems 🧮
 
-## Find the Largest element in an array 🌲
+## 1)Find the Largest element in an array 🌲
 
 **Brute Force Approach:💡**
 - Sort the array in an ascending order using any of the sorting algo & return the last index (arr[n-1])
@@ -24,7 +24,7 @@
 
 **Link🔗:** <a href="https://www.codingninjas.com/studio/problems/largest-element-in-the-array-largest-element-in-the-array_5026279?utm_source=striver">Find the Largest element in an array</a>
 
-## Find the Second Largest element in an array 🌲🌲
+## 2)Find the Second Largest element in an array 🌲🌲
 
 **Brute Force Approach:💡**
 - Sort the array in an ascending order using any of the sorting algo
@@ -91,7 +91,7 @@
 
 
 
-## Check if the Array Is Sorted and Rotated 📊
+## 3)Check if the Array Is Sorted and Rotated 📊
 
 **Idea💡**
 - For rotations, 🔑 things are if the array is sorted, the 1st element > the last element.
@@ -121,4 +121,24 @@
     
 
 **Link🔗:** <a href="https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/description/">Find if the array is sorted & rotated </a>
-     
+
+
+## 4)Remove Duplicates from Sorted Array
+
+**Idea💡**
+- we have to remove the duplicates **in-place** such that each unique element appears only once. The relative order of the elements should be kept the same.
+- We can go with the 2 pointer approach. For that, we initialize 1st ptr as 1 & start traversing the array, if current & previous elements are not equal, increment 1st ptr & replace the element in 1st ptr's position.
+  
+**Code👩🏻‍💻**
+
+     int ptr1=1;
+     for (int ptr2 = 1; i < nums.length; i++) {
+            if (nums[ptr2 - 1] !=nums[ptr2]) {
+                ptr1++;
+                nums[ptr1]=nums[ptr2];
+            }
+        }
+        return ptr1;
+    }
+
+**Link🔗:** <a href="https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/description/"> Remove Duplicates from Sorted Array</a>
