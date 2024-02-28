@@ -33,7 +33,7 @@
 
 **Better Approach:💡**
 - First find the largest element in an array, for the 2nd pass start traversing the loop, if the element is greater than 2nd Largest && not equal to the largest element, return the element.
-- Time complexity  : O(n) Space Complexity : O(1)
+- Time complexity  : O(2n) Space Complexity : O(1)
 
 **Code 👩🏻‍💻**
 
