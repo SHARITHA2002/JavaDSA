@@ -88,3 +88,37 @@
     }
 
 **Link🔗:** <a href="https://www.codingninjas.com/studio/problems/ninja-and-the-second-order-elements_6581960?utm_source=striver">Find the Second Largest element in an array</a>
+
+
+
+## Check if the Array Is Sorted and Rotated 📊
+
+**Idea💡**
+- For rotations, 🔑 things are if the array is sorted, the 1st element > the last element.
+- The next condition would be that only one element in an array, should be greater than the previous element i.e.) [7,2,4,6] Here @ only once,7 is greater than 2 otherwise both sides are in ascending order.
+  
+**Code👩🏻‍💻**
+
+     int count = 0;
+     boolean result = false;
+
+        // Sorted or not
+        if (nums[nums.length - 1] > nums[0]) {
+            count++;
+        }
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i - 1] > nums[i]) {
+                count++;
+            }
+        }
+
+        // Rotation check
+        if (count <= 1) {
+            result = true;
+        }
+        return result;
+    }
+    
+
+**Link🔗:** <a href="https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/description/">Find if the array is sorted & rotated </a>
+     
