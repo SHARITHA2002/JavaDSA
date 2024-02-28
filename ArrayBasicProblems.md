@@ -132,7 +132,7 @@
 **Code👩🏻‍💻**
 
      int ptr1=1;
-     for (int ptr2 = 1; i < nums.length; i++) {
+     for (int ptr2 = 1; ptr2< nums.length; ptr2++) {
             if (nums[ptr2 - 1] !=nums[ptr2]) {
                 ptr1++;
                 nums[ptr1]=nums[ptr2];
