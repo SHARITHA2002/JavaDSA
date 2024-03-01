@@ -164,12 +164,12 @@
   
 **Code👩🏻‍💻**
 
-        k%=nums.length;
-        rotateArray(nums,0,nums.length-1);
-        rotateArray(nums,0,k-1);
-        rotateArray(nums,k,nums.length-1);
+        k %= nums.length;  // Ensure k is within the range of array length
+        rotateArray(nums, 0, nums.length - 1);  // Rotate the entire array
+        rotateArray(nums, 0, k - 1);  // Rotate the first k elements
+        rotateArray(nums, k, nums.length - 1);  // Rotate the remaining elements
 
-        public void rotateArray(int[] nums,int start,int end)
+        public void rotateArray(int[] nums, int start, int end)
          {
              while(start<end)
              {
