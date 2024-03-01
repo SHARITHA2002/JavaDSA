@@ -142,3 +142,44 @@
     }
 
 **Link🔗:** <a href="https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/description/"> Remove Duplicates from Sorted Array</a>
+
+
+
+## 4)Rotate Array
+
+**Idea💡**
+- Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
+- Input: nums = [1,2,3,4,5,6,7], k = 3 ,Output: [5,6,7,1,2,3,4]
+- Explanation:
+  
+     rotate 1 step to the right: [7,1,2,3,4,5,6]
+     
+     rotate 2 steps to the right: [6,7,1,2,3,4,5]
+     
+     rotate 3 steps to the right: [5,6,7,1,2,3,4]
+  
+-  First, reduce key to key%arr. length then reverse the whole array
+-  Secondly, reverse the array from 0 to key-1
+-  Finally, reverse the array from key to arr. length -1;
+  
+**Code👩🏻‍💻**
+
+        k%=nums.length;
+        rotateArray(nums,0,nums.length-1);
+        rotateArray(nums,0,k-1);
+        rotateArray(nums,k,nums.length-1);
+
+        public void rotateArray(int[] nums,int start,int end)
+         {
+             while(start<end)
+             {
+                 int temp=nums[start];
+                 nums[start]=nums[end];
+                 nums[end]=temp;
+                 start++;
+                 end--;
+             }
+         }
+   
+
+**Link🔗:** <a href="https://leetcode.com/problems/rotate-array/description/"> Rotate Array</a>
