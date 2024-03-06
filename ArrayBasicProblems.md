@@ -145,7 +145,7 @@
 
 
 
-## 4)Rotate Array
+## 5)Rotate Array
 
 **Idea💡**
 - Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
@@ -183,3 +183,112 @@
    
 
 **Link🔗:** <a href="https://leetcode.com/problems/rotate-array/description/"> Rotate Array</a>
+
+
+## 6)Move Zeroes
+
+- Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+- Input: nums = [0,1,0,3,12] Output: [1,3,12,0,0]
+
+**Idea💡**
+
+-  There are 2 approaches are there,
+     
+-  **Brute force approach:**
+
+   - Creating new arr with a size of the given array & ptr with value 0
+   - Start iterating the given arr, if any non-zero element is found, add it to the temp array in the ptr index & increment the ptr.
+   - At last, the other positions in the array are automatically filled with the value 0 [BY default in Java while array declaration all the values are filled with 0]
+   - Code👩🏻‍💻:
+           
+                 int[] temp=new int[a.length];
+                 int j=0;
+                 for(int i=0;i<a.length;i++)
+                 {
+                     if(a[i]!=0)
+                     {
+                         temp[j]=a[i];
+                         j++;
+                     }
+                 }
+                 return temp;
+           
+-  **Optimal approach:**
+
+   -  In this approach, normal swapping is the key., The only condition is when the ptr meets the non-zero element, then only swapping has to be done
+   -  So initialize a ptr with a value of 0 & start iterating the array, when it meets the non-zero elemnt just swap arr[ptr] with a non-zero value & increment the ptr;
+   -  Code 👩🏻‍💻:
+
+                  int j=0;
+                  for(int i=0;i<nums.length;i++)
+                  {
+                      if(nums[i]!=0)
+                      {
+                          int temp=nums[j];
+                          nums[j]=nums[i];
+                          nums[i]=temp;
+                          j++;
+                      }
+                  }
+
+**Link🔗:** <a href="https://leetcode.com/problems/move-zeroes/">Move Zeroes</a>
+
+## 6)Merge 2 Sorted Array
+
+- Given two sorted arrays, ‘a’ and ‘b’, of size ‘n’ and ‘m’, respectively, return the union of the arrays.
+- Input: a= [1, 2, 3, 4, 6], b = [2, 3, 5] Output: [1, 2, 3, 4, 5, 6]
+
+**Idea💡**
+   -  In simple, we have to initialize 2 ptr for the 2 arrays & one array list for adding the unique elements.
+   -  We have to Do the operations until our ptrs are less than the length of that array.
+   -  Inside, then start checking if the  element is the 1st element in the array list or the previous element of the array list & the current element of the array are not the same,if then add the elemnt to the array list & also increment the pointers
+   -  If any one of  the arrays becomes greater than the length of the array, then no more comparison is required with the other array, just push the elements by only checking if they already exist, otherwise add it to the array list. 
+   -  Code 👩🏻‍💻:
+
+                  ArrayList<Integer> arr=new ArrayList<>();
+                  int i=0;
+                  int j=0;
+                  int n1=a.length;
+                  int n2=b.length;
+                  while(i<n1 && j<n2)
+                  {
+                      if(a[i]<=b[j])
+                      {
+                         if(arr.size()==0 || arr.get(arr.size()-1)!=a[i])
+                          {
+                              arr.add(a[i]);
+                          }
+                          i++;
+                      }
+                      else
+                      {
+                           if(arr.size()==0 || arr.get(arr.size()-1)!=b[j])
+                          {
+                              arr.add(b[j]);
+                          }
+                          j++;
+                      }
+                  }
+                  while(i<n1)
+                  {
+                      if(arr.size()==0 || arr.get(arr.size()-1)!=a[i])
+                          {
+                              arr.add(a[i]);
+                          }
+                          i++;
+                  }
+                  while(j<n2)
+                  {
+                       if(arr.size()==0 || arr.get(arr.size()-1)!=b[j])
+                          {
+                              arr.add(b[j]);
+                          }
+                          j++;
+                  }
+                  return arr;
+
+**Link🔗:** <a href="https://www.codingninjas.com/studio/problems/sorted-array_6613259?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf">Find Unions</a>
+
+
+
+
