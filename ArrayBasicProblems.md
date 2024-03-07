@@ -1,4 +1,14 @@
 ## Arrays Basic Problems 🧮
+   
+        1) Find the Largest element in an array🎄
+        2) Find the Second Largest element in an array 🌲🌲
+        3) Check if the Array Is Sorted and Rotated 📊
+        4) Remove Duplicates from Sorted Array👨🏽‍🤝‍👨🏼
+        5) Rotate Array⭕
+        6) Move Zeroes  🤜🏻0
+        7) Union of Arrays 💠
+        8) Intersection of Two Arrays 🧩
+
 
 ## 1)Find the Largest element in an array 🌲
 
@@ -62,7 +72,7 @@
 **Optimal Approach:💡**
 - Initialize the largest & secondLargest with Integer.MIN_VALUE & start Iterate the given array.
 - If the element is greater than the largest element replace secondLargest element with the largest element (previous largest) && the largest element with that element
-- If the element is greater than secondLargest element && that element is not the same as the largest element, then replace secondLargest elemnt with that element.
+- If the element is greater than secondLargest element && that element is not the same as the largest element, then replace the second largest elemnt with that element.
 - Time complexity  : O(n) Space Complexity : O(1)
 
 **Code👩🏻‍💻**
@@ -123,7 +133,7 @@
 **Link🔗:** <a href="https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/description/">Find if the array is sorted & rotated </a>
 
 
-## 4)Remove Duplicates from Sorted Array
+## 4)Remove Duplicates from Sorted Array👨🏽‍🤝‍👨🏼
 
 **Idea💡**
 - we have to remove the duplicates **in-place** such that each unique element appears only once. The relative order of the elements should be kept the same.
@@ -145,7 +155,7 @@
 
 
 
-## 5)Rotate Array
+## 5)Rotate Array⭕
 
 **Idea💡**
 - Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
@@ -185,7 +195,7 @@
 **Link🔗:** <a href="https://leetcode.com/problems/rotate-array/description/"> Rotate Array</a>
 
 
-## 6)Move Zeroes
+## 6)Move Zeroes 
 
 - Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 - Input: nums = [0,1,0,3,12] Output: [1,3,12,0,0]
@@ -233,7 +243,7 @@
 
 **Link🔗:** <a href="https://leetcode.com/problems/move-zeroes/">Move Zeroes</a>
 
-## 6)Merge 2 Sorted Array
+## 7)Merge 2 Sorted Array 💠
 
 - Given two sorted arrays, ‘a’ and ‘b’, of size ‘n’ and ‘m’, respectively, return the union of the arrays.
 - Input: a= [1, 2, 3, 4, 6], b = [2, 3, 5] Output: [1, 2, 3, 4, 5, 6]
@@ -288,6 +298,41 @@
                   return arr;
 
 **Link🔗:** <a href="https://www.codingninjas.com/studio/problems/sorted-array_6613259?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf">Find Unions</a>
+
+
+## 8) Intersection of Two Arrays 🧩
+
+- Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must be unique and you may return the result in any order.
+- Input:  nums1 = [1,2,2,1], nums2 = [2,2]  Output: [2]
+
+**Idea💡**
+   -  For this, we can use **SET** data structure. Create 2 sets for each array [i.e. set filters & store the unique element from an array].  Eg. [1,2,2,1]=>[1,2] & [2,2]=>2
+   -  After these, we have 2 unique sets, Now we have to find what are all the elements present in both sets, for that, we can use a predefined method,**retainAll**
+   -  set1.retainAll(set2) => Element which are present in both set1 & set2 are kept in set1, other elements get deleted from the set1.
+   -  Now we have intersected elements on the set, we can use the for-each loop to convert our set into the result array
+   -  Code 👩🏻‍💻:
+
+             Set<Integer> set1=new HashSet<>();
+             Set<Integer> set2=new HashSet<>();
+             for(int i=0;i<nums1.length;i++)
+             {
+                 set1.add(nums1[i]);
+             }
+             for(int j=0;j<nums2.length;j++)
+             {
+                 set2.add(nums2[j]);
+             }
+             set1.retainAll(set2);
+             int[] result=new int[set1.size()];
+             int p=0;
+             for(int ele:set1)
+             {
+                 result[p++]=ele;
+             }
+             return result;
+
+**Link🔗:** <a href="https://leetcode.com/problems/intersection-of-two-arrays/">Intersection of Two Arrays</a>
+
 
 
 
