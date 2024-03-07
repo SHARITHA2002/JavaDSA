@@ -2,7 +2,7 @@
 
 **Practice Link:** 
 
-   🏋️https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2
+   🏋️ https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2
 
 ## Topics
 
@@ -28,13 +28,13 @@
 
 9) Sorting:
 
-    📊 https://github.com/SHARITHA2002/JavaDSA/blob/main/Sorting.md
+   📊 https://github.com/SHARITHA2002/JavaDSA/blob/main/Sorting.md
 
 10) Searching:
 
-     🔍https://github.com/SHARITHA2002/JavaDSA/blob/main/Searching.md
+    🔍 https://github.com/SHARITHA2002/JavaDSA/blob/main/Searching.md
 
 11) Basic array Problems :
 
-    🗃https://github.com/SHARITHA2002/JavaDSA/blob/main/ArrayBasicProblems.md
+    🗃 https://github.com/SHARITHA2002/JavaDSA/blob/main/ArrayBasicProblems.md
     
