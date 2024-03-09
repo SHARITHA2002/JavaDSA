@@ -386,11 +386,10 @@
            }
            return 0;
 
-**2) Optimal Approach:**
+**3) Optimal Approach:**
 
    -  In simple, by adding the elements from 1 to n using n*(n+1)/2
    -  Adding all the elements from the given array. The difference between the total sum  & sum of n numbers will be the answer.
-   -  
      
    -  Code 👩🏻‍💻:
 
