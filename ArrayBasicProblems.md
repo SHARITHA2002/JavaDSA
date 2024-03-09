@@ -8,7 +8,7 @@
         6) Move Zeroes  🤜🏻0
         7) Union of Arrays 💠
         8) Intersection of Two Arrays 🧩
-
+        9) Missing Number 🔍
 
 ## 1)Find the Largest element in an array 🌲
 
@@ -332,6 +332,77 @@
              return result;
 
 **Link🔗:** <a href="https://leetcode.com/problems/intersection-of-two-arrays/">Intersection of Two Arrays</a>
+
+
+## 9) Missing Number 🔍
+
+- Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
+- Input: nums = [3,0,1] Output: 2
+ 
+
+**Approaches💡**
+
+**1) Brute Force Approach:**
+
+   -  By performing the linear search from 1 to num, We can able to find what number is missing in the array. 
+   -  Code 👩🏻‍💻:
+
+            int count=0;
+            for(int i=0;i<=nums.length;i++)
+           {
+               count=0;
+               for(int j=0;j<nums.length;j++)
+               {
+                   if(i==nums[j])
+                   {
+                       count++;
+                   }
+               }
+               if(count==0)
+               {
+                   return i;
+               }
+           }
+           return -1;
+          }
+      
+**2) Better Approach:**
+
+   -  By performing the hashing, i.e we can create an array of size(n+1), Iterate through our given array & update the value to 1
+   -  After we hashed the entire array, we have to start iterating the hashed array if we find the value 0 i.e. the number is not there. We can return the index.
+   -  Code 👩🏻‍💻:
+
+           int[] hashArr=new int[nums.length+1];
+           for(int i=0;i<nums.length;i++)
+           {
+               hashArr[nums[i]]++;
+           }
+           for(int j=0;j<hashArr.length;j++)
+           {
+               if(hashArr[j]==0)
+               {
+                   return j;
+               }
+           }
+           return 0;
+
+**2) Optimal Approach:**
+
+   -  In simple, by adding the elements from 1 to n using n*(n+1)/2
+   -  Adding all the elements from the given array. The difference between the total sum  & sum of n numbers will be the answer.
+   -  
+     
+   -  Code 👩🏻‍💻:
+
+           int sum=nums.length*(nums.length+1)/2;
+           int count=0;
+           for(int i=0;i<nums.length;i++)
+           {
+               count+=nums[i];
+           }
+           return sum-count;
+
+**Link🔗:** <a href="https://leetcode.com/problems/missing-number/description/">Missing Number</a>
 
 
 
