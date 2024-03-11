@@ -9,6 +9,8 @@
         7) Union of Arrays 💠
         8) Intersection of Two Arrays 🧩
         9) Missing Number 🔍
+        10) Max Consecutive Ones 1111.
+        11) Single number 🚹...👨‍👩‍👦‍👦 👨‍👩‍👧 
 
 ## 1)Find the Largest element in an array 🌲
 
@@ -405,5 +407,109 @@
 
 
 
+## 10) Max Consecutive Ones [11..]
+
+- Given a binary array nums, return the maximum number of consecutive 1's in the array.
+- Input: nums = [1,1,0,1,1,1] Output: 3
+
+**Idea💡**
+   -  Simple, start iterating an array, if the iterator sees **1**, increment the count & compare whether it is max count, if it is, replace max with the current count, or else max will remain same
+   -  If the iterator sees **0**, consecutiveness breaks here, so reset the count value to 0
+   -  Code 👩🏻‍💻:
+
+           int count=0;
+           int max=0;
+           for(int i=0;i<nums.length;i++)
+           {
+               count=nums[i]==1?count+=1:0;
+               if(count>max)
+               {
+                   max=count;
+               }
+           }
+           return max;
+
+**Link🔗:** <a href="https://leetcode.com/problems/max-consecutive-ones/">Max Consecutive Ones</a>
+
+
+## 11) Single number 🚹...👨‍👩‍👦‍👦 👨‍👩‍👧 
+
+- Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+- Input: nums = [2,2,1] Output: 1
+ 
+**Approaches💡**
+
+**1) Brute Force Approach:**
+
+   -  By performing the linear search from 1 to num, We can able to find what number is being single in the array. 
+   -  Code 👩🏻‍💻:
+
+           int count=0;
+           for(int i=0;i<nums.length;i++)
+           {
+               count=0;
+               for(int j=0;j<nums.length;j++)
+               {
+                   if(nums[i]==nums[j])
+                   {
+                       count++;
+                   }
+               }
+               if(count==1)
+               {
+                   return nums[i];
+               }
+           }
+           return 0;
+
+   - Time complexity : O(n<sup>2</sup>); 
+      
+**2) Better Approach:**
+
+   -  By including hashmap data structure, because hashmap data structure stores the unique key.
+   -  At first, we will iterate the given array & check if our map already has the key, if it is increment the count value, otherwise set it as one.
+   -  Then iterate our map and find if any of our keys have count 1, then return that key.
+     
+   -  Code 👩🏻‍💻:
+        
+            HashMap<Integer,Integer> map=new HashMap<>();
+            for(int i=0;i<nums.length;i++)
+            {
+                if(map.containsKey(nums[i]))
+                {
+                    map.put(nums[i],map.get(nums[i])+1);
+                }
+                else
+                {
+                    map.put(nums[i],1);
+                }
+            }
+            for(int key:map.keySet())
+            {
+                if(map.get(key)==1)
+                {
+                    return key;
+                }
+            }
+            return 1;
+         
+**3) Optimal Approach:**
+
+   -  In simple, by using bit manipulation(XOR)
+   -  XOR all the elements in an array will return the single number in the array.
+     
+   -  Code 👩🏻‍💻:
+
+          int xor1=0;
+          for(int i=0;i<nums.length;i++)
+          {
+              xor1=xor1^nums[i];
+          }
+          return xor1;
+      
+  - Time Complexity: O(n)
+  - Space Complexity: O(1)
+  - 
+**Link🔗:** <a href="https://leetcode.com/problems/single-number/">Single Number</a>
 
 
